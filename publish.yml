@@ -1,0 +1,30 @@
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - "v*"          # triggers on v0.1.0, v1.0.0, etc.
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    environment: pypi          # must match the environment name in Trusted Publisher config
+    permissions:
+      id-token: write          # required for OIDC — no API token needed
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build tools
+        run: pip install build
+
+      - name: Build wheel + sdist
+        run: python -m build
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        # No username/password needed — Trusted Publisher handles auth via OIDC
