@@ -5,6 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "promptframe"
 version = "0.1.0"
+
+authors = [
+    {name = "Anik Mallick", email = "anik.mallick.code@gmail.com"}
+]
+
 description = "LLM-agnostic prompt management — YAML-based storage, typed loading, and a fluent builder API."
 readme = "README.md"
 license = { text = "MIT" }
