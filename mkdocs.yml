@@ -1,0 +1,104 @@
+site_name: promptframe
+site_description: LLM-agnostic prompt management — YAML storage, typed loading, structured output, and a fluent builder API.
+site_url: https://AnikMallick.github.io/promptframe
+repo_url: https://github.com/AnikMallick/promptframe
+repo_name: AnikMallick/promptframe
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_if_no_docstring: false
+            heading_level: 2
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Guides:
+      - Prompt Management: guides/prompt-management.md
+      - Structured Output: guides/structured-output.md
+      - Skills: guides/skills.md
+      - Prompt Builder: guides/builder.md
+      - Environments: guides/environments.md
+  # - Streamlit UI: ui.md
+  - API Reference:
+      - PromptRegistry: api/registry.md
+      - Models: api/models.md
+      - LLMBaseModel: api/llm-base-model.md
+      - LLMField: api/fields.md
+      - Components: api/components.md
+      - Skill: api/skill.md
+      - SkillRegistry: api/skill-registry.md
+      - Builder: api/builder.md
+      - Parsers: api/parsers.md
+      - Exceptions: api/exceptions.md
+      - CLI: api/cli.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YOURUSERNAME/promptframe
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/promptframe

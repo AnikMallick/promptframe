@@ -1,0 +1,24 @@
+version: 1.0
+metadata:
+  type: prompt
+  name: summarise
+  description: Text summarisation prompts
+  tags: [nlp, summarise]
+  project: demo
+
+prompts:
+- pid: short_summary
+  description: Summarise text in one sentence.
+  input_variables: [text]
+  prompt: |
+    Summarise the following text in a single sentence:
+
+    {text}
+
+- pid: bullet_summary
+  description: Summarise as bullet points.
+  input_variables: [text, n]
+  prompt: |
+    Summarise the following text as exactly {n} bullet points:
+
+    {text}

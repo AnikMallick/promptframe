@@ -1,0 +1,15 @@
+version: 1.0
+metadata:
+  type: model_prompt
+  name: customer_prompts
+  description: Field-level prompts for the Customer model.
+  tags: [customer]
+  project: demo
+
+prompts:
+- pid: name_prompt
+  model_attribute_id: customer_name
+  input_instruction: |
+    The raw input may contain a messy or abbreviated name.
+  output_instruction: |
+    Return the customer's full name in Title Case, e.g. 'John Smith'.
