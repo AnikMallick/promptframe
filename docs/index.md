@@ -1,4 +1,4 @@
-# promptframe
+# PromptFrame
 
 **LLM-agnostic prompt management** — store prompts as YAML, load them as typed Python objects, attach instructions to Pydantic models for structured output, and compose everything with a fluent builder API.
 
@@ -6,7 +6,7 @@ Works with any LLM — OpenAI, Anthropic, Gemini, LiteLLM, or raw HTTP. Zero inf
 
 ---
 
-## Why promptframe?
+## Why PromptFrame?
 
 Most projects start with prompt strings scattered in Python files. As the project grows this becomes painful:
 
@@ -15,7 +15,7 @@ Most projects start with prompt strings scattered in Python files. As the projec
 - No structure around structured output — parsing is ad-hoc
 - Instructions for LLM fields duplicated between code and prompts
 
-promptframe solves all of this by giving prompts a **home** (YAML files), a **type** (Pydantic models), and a **bridge** (`model_attribute_id`) that connects field-level instructions in YAML to your Python data structures — without coupling your code to any specific LLM.
+PromptFrame solves all of this by giving prompts a **home** (YAML files), a **type** (Pydantic models), and a **bridge** (`model_attribute_id`) that connects field-level instructions in YAML to your Python data structures — without coupling your code to any specific LLM.
 
 ---
 
@@ -156,6 +156,5 @@ promptframe/
 │   ├── exceptions.py      # typed exceptions
 │   ├── cli.py             # promptframe CLI
 │   └── components/        # all built-in prompt components
-├── app.py                 # Streamlit UI
 └── docs/                  # this documentation
 ```

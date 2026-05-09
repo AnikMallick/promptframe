@@ -1,6 +1,6 @@
-site_name: promptframe
+site_name: PromptFrame
 site_description: LLM-agnostic prompt management — YAML storage, typed loading, structured output, and a fluent builder API.
-site_url: https://AnikMallick.github.io/promptframe
+site_url: https://AnikMallick.github.io/promptframe/
 repo_url: https://github.com/AnikMallick/promptframe
 repo_name: AnikMallick/promptframe
 edit_uri: edit/main/docs/

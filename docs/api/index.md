@@ -1,6 +1,6 @@
-# promptframe — API Reference
+# PromptFrame — API Reference
 
-**promptframe** is an LLM-agnostic prompt management toolkit. It provides typed YAML prompt loading, composable prompt components, structured output schema generation, skill (markdown instruction) injection, and a CLI for day-to-day prompt operations.
+**PromptFrame** is an LLM-agnostic prompt management toolkit. It provides typed YAML prompt loading, composable prompt components, structured output schema generation, skill (markdown instruction) injection, and a CLI for day-to-day prompt operations.
 
 ---
 

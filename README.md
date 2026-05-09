@@ -1,7 +1,13 @@
-# promptframe
+<p align="center">
+  <img src="img/logo.png" alt="promptframe logo" width="300"/>
+</p>
 
+# PromptFrame
 
 > LLM-agnostic prompt management — YAML storage, typed loading, structured output support, composable builder API, markdown skills, and a full CLI.
+
+
+[![PyPI version](https://img.shields.io/pypi/v/promptframe)](https://pypi.org/project/promptframe/) [![Python versions](https://img.shields.io/pypi/pyversions/promptframe)](https://pypi.org/project/promptframe/) [![PyPI downloads](https://img.shields.io/pypi/dm/promptframe)](https://pypi.org/project/promptframe/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ---
 
