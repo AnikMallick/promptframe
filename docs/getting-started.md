@@ -6,12 +6,6 @@
 pip install promptframe
 ```
 
-For the Streamlit UI:
-
-```bash
-pip install "promptframe[ui]"
-```
-
 **Requirements:** Python 3.11+
 
 ---
