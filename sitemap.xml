@@ -5,27 +5,71 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://AnikMallick.github.io/promptframe/builder/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
-         <loc>https://AnikMallick.github.io/promptframe/environments/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
          <loc>https://AnikMallick.github.io/promptframe/getting-started/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://AnikMallick.github.io/promptframe/prompt-management/</loc>
+         <loc>https://AnikMallick.github.io/promptframe/api/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://AnikMallick.github.io/promptframe/skills/</loc>
+         <loc>https://AnikMallick.github.io/promptframe/api/builder/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://AnikMallick.github.io/promptframe/structured-output/</loc>
+         <loc>https://AnikMallick.github.io/promptframe/api/cli/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/api/components/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/api/exceptions/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/api/fields/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/api/llm_base_model/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/api/models/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/api/parsers/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/api/registry/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/api/skills/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/guides/builder/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/guides/environments/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/guides/prompt-management/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/guides/skills/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/guides/structured-output/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
 </urlset>
