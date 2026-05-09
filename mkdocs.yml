@@ -75,14 +75,13 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
+  - Getting Started: docs/getting-started.md
   - Guides:
-      - Prompt Management: guides/prompt-management.md
-      - Structured Output: guides/structured-output.md
-      - Skills: guides/skills.md
-      - Prompt Builder: guides/builder.md
-      - Environments: guides/environments.md
-  # - Streamlit UI: ui.md
+      - Prompt Management: docs/prompt-management.md
+      - Structured Output: docs/structured-output.md
+      - Skills: docs/skills.md
+      - Prompt Builder: docs/builder.md
+      - Environments: docs/environments.md
   - API Reference:
       - PromptRegistry: api/registry.md
       - Models: api/models.md
