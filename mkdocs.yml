@@ -75,25 +75,25 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started: docs/getting-started.md
+  - Getting Started: getting-started.md
   - Guides:
-      - Prompt Management: docs/prompt-management.md
-      - Structured Output: docs/structured-output.md
-      - Skills: docs/skills.md
-      - Prompt Builder: docs/builder.md
-      - Environments: docs/environments.md
-  - API Reference:
-      - PromptRegistry: api/registry.md
-      - Models: api/models.md
-      - LLMBaseModel: api/llm-base-model.md
-      - LLMField: api/fields.md
-      - Components: api/components.md
-      - Skill: api/skill.md
-      - SkillRegistry: api/skill-registry.md
-      - Builder: api/builder.md
-      - Parsers: api/parsers.md
-      - Exceptions: api/exceptions.md
-      - CLI: api/cli.md
+      - Prompt Management: prompt-management.md
+      - Structured Output: structured-output.md
+      - Skills: skills.md
+      - Prompt Builder: builder.md
+      - Environments: environments.md
+  # - API Reference:
+  #     - PromptRegistry: api/registry.md
+  #     - Models: api/models.md
+  #     - LLMBaseModel: api/llm-base-model.md
+  #     - LLMField: api/fields.md
+  #     - Components: api/components.md
+  #     - Skill: api/skill.md
+  #     - SkillRegistry: api/skill-registry.md
+  #     - Builder: api/builder.md
+  #     - Parsers: api/parsers.md
+  #     - Exceptions: api/exceptions.md
+  #     - CLI: api/cli.md
 
 extra:
   social:
