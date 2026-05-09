@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="img/logo.png" alt="promptframe logo" width="300"/>
-</p>
-
 # promptframe
 
 
