@@ -596,6 +596,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -988,17 +1016,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error Handling
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1297,17 +1314,6 @@
     <span class="md-ellipsis">
       
         SkillComponent
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error Handling
       
     </span>
   </a>
@@ -1647,12 +1653,6 @@
 </span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>
 </span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="c1"># With XML wrapper</span>
 </span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="n">SkillComponent</span><span class="p">(</span><span class="n">skill</span><span class="p">,</span> <span class="n">wrapper</span><span class="o">=</span><span class="s2">&quot;&lt;skill&gt;</span><span class="se">\n</span><span class="si">{skill}</span><span class="se">\n</span><span class="s2">&lt;/skill&gt;&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<hr />
-<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
-<p>All <code>render()</code> methods decorated with <code>@catch_keyerror</code> will raise <code>ValueError</code> (with a helpful message) if a required placeholder key is missing from the context, instead of the raw <code>KeyError</code>.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">c</span> <span class="o">=</span> <span class="n">SimplePromptComponent</span><span class="p">(</span><span class="s2">&quot;Hello, </span><span class="si">{name}</span><span class="s2">!&quot;</span><span class="p">)</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">c</span><span class="o">.</span><span class="n">render</span><span class="p">({})</span>  <span class="c1"># ValueError: Missing key in context for template: &#39;name&#39;</span>
 </span></code></pre></div>
 
 

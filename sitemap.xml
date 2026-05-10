@@ -2,74 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://AnikMallick.github.io/promptframe/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/getting-started/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/builder/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/cli/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/components/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/exceptions/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/fields/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/llm_base_model/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/models/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/parsers/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/registry/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/api/skills/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/guides/builder/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
+    </url>
+    <url>
+         <loc>https://AnikMallick.github.io/promptframe/guides/cli/</loc>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/guides/environments/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/guides/prompt-management/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/guides/skills/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
     <url>
          <loc>https://AnikMallick.github.io/promptframe/guides/structured-output/</loc>
-         <lastmod>2026-05-09</lastmod>
+         <lastmod>2026-05-10</lastmod>
     </url>
 </urlset>

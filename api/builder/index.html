@@ -596,6 +596,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1292,7 +1320,7 @@
 
 <h1 id="structuredpromptbuilder">StructuredPromptBuilder<a class="headerlink" href="#structuredpromptbuilder" title="Permanent link">&para;</a></h1>
 <p><strong>Module:</strong> <code>promptframe.builder</code></p>
-<p>Fluent builder for assembling multi-part prompts from <a href="../components/"><code>BasePromptComponent</code></a> instances. Components are joined with blank lines (<code>\n\n</code>) — the standard LLM prompt separator.</p>
+<p>Fluent builder for assembling multi-part prompts from <a href="../components/"><code>BasePromptComponent</code></a> instances. Components are joined with blank lines (<code>\n\n</code> by default) — the standard LLM prompt separator.</p>
 <hr />
 <h2 id="structuredpromptbuilder_1"><code>StructuredPromptBuilder</code><a class="headerlink" href="#structuredpromptbuilder_1" title="Permanent link">&para;</a></h2>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">StructuredPromptBuilder</span><span class="p">()</span>
@@ -1311,7 +1339,7 @@
 <td>Append a component (right-shift)</td>
 </tr>
 <tr>
-<td><code>builder \| component</code></td>
+<td><code>builder | component</code></td>
 <td>Append a component (pipe)</td>
 </tr>
 </tbody>
@@ -1342,7 +1370,7 @@
 <tbody>
 <tr>
 <td><code>context</code></td>
-<td><code>Dict \| None</code></td>
+<td><code>Dict | None</code></td>
 <td><code>None</code></td>
 <td>Variables for <code>{placeholder}</code> interpolation passed to every component</td>
 </tr>
@@ -1367,7 +1395,7 @@
 <tbody>
 <tr>
 <td><code>context</code></td>
-<td><code>Dict \| None</code></td>
+<td><code>Dict | None</code></td>
 <td><code>None</code></td>
 <td>Render variables</td>
 </tr>
