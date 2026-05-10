@@ -1,6 +1,6 @@
 # Structured Output
 
-The structured output system is the core feature that separates promptframe from a simple YAML loader. It lets you:
+The structured output system is the core feature that separates PromptFrame from a simple YAML loader. It lets you:
 
 1. Define your output schema as a Python class (`LLMBaseModel`)
 2. Store per-field instructions in a YAML file (decoupled from code)
@@ -110,6 +110,105 @@ messages = [
     {"role": "user",    "content": input_schema + "\n\n" + invoice_text},
     {"role": "user",    "content": output_schema},
 ]
+```
+
+What did it create:
+
+- input_schema: 
+
+```json
+Here is the input data schema with embedded field instructions and metadata:
+<input_schema>{
+"vendor": {
+    "instruction": ""
+},
+"total": {
+    "instruction": ""
+},
+"date": {
+    "instruction": "The invoice date may be written in various formats.\n"
+},
+"line_items": {
+    "instruction": ""
+}
+}</input_schema>
+```
+
+- output_schema
+
+```json
+Your response must be a valid JSON parseable object.
+This ensures the output can be reliably parsed and used in downstream processes.
+
+Example of a JSON Schema is shown below:
+{
+  "properties": {
+    "user": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "integer"},
+        "profile": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "skills": {"type": "array", "items": {"type": "string"}}
+          },
+          "required": ["name", "skills"]
+        }
+      },
+      "required": ["id", "profile"]
+    }
+  },
+  "required": ["user"]
+}
+
+Valid output:
+{
+  "user": {
+    "id": 123,
+    "profile": {
+      "name": "Alice",
+      "skills": ["Python", "FastAPI"]
+    }
+  }
+}
+
+Your response should be STRICLY formated using this schema:
+
+<format_instructions>{
+  "properties": {
+    "vendor": {
+      "title": "Vendor",
+      "type": "string",
+      "output_instruction": "Return the vendor/supplier name as a string.\n"
+    },
+    "total": {
+      "title": "Total",
+      "type": "number",
+      "output_instruction": "Return the total amount as a float. Strip any currency symbols.\n\"\u00a31,234.56\" \u2192 1234.56\n"
+    },
+    "date": {
+      "title": "Date",
+      "type": "string",
+      "output_instruction": "Return the date as ISO 8601 string: \"YYYY-MM-DD\".\n"
+    },
+    "line_items": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Line Items",
+      "type": "array",
+      "output_instruction": "Return a JSON array of strings. Each string is one line item.\nExample: [\"Consulting 2h @ \u00a3150 = \u00a3300\", \"Travel = \u00a345\"]"
+    }
+  },
+  "required": [
+    "vendor",
+    "total",
+    "date"
+  ],
+  "title": "Invoice",
+  "type": "object"
+}</format_instructions>
 ```
 
 ---

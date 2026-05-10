@@ -16,11 +16,11 @@ Represents the `metadata` block at the top of every prompt YAML file.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `type` | `"prompt" \| "model_prompt"` | ✅ | File type discriminator |
+| `type` | `"prompt" | "model_prompt"` | ✅ | File type discriminator |
 | `name` | `str` | ✅ | Human-readable name for this collection |
-| `description` | `str \| None` | — | Short description |
-| `tags` | `List[str] \| None` | — | Free-form tags |
-| `project` | `str \| None` | — | Project identifier |
+| `description` | `str | None` | — | Short description |
+| `tags` | `List[str] | None` | — | Free-form tags |
+| `project` | `str | None` | — | Project identifier |
 
 ---
 
@@ -35,8 +35,8 @@ A single prompt entry inside a `type: prompt` YAML file.
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `pid` | `str` | ✅ | Unique prompt identifier |
-| `description` | `str \| None` | — | What this prompt does |
-| `input_variables` | `List[str] \| None` | — | Named `{placeholder}` variables |
+| `description` | `str | None` | — | What this prompt does |
+| `input_variables` | `List[str] | None` | — | Named `{placeholder}` variables |
 | `prompt` | `str` | ✅ | The prompt text, may contain `{placeholders}` |
 
 ### Methods
@@ -67,11 +67,11 @@ A single prompt entry inside a `type: model_prompt` YAML file. Used to inject pe
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `pid` | `str` | ✅ | Unique prompt identifier |
-| `description` | `str \| None` | — | Description of this prompt's purpose |
-| `input_variables` | `List[str] \| None` | — | Named `{placeholder}` variables |
+| `description` | `str | None` | — | Description of this prompt's purpose |
+| `input_variables` | `List[str] | None` | — | Named `{placeholder}` variables |
 | `model_attribute_id` | `str` | ✅ | Key used to bind this prompt to an `LLMField` on a model |
-| `input_instruction` | `str \| None` | — | Instruction injected into input schemas |
-| `output_instruction` | `str \| None` | — | Instruction injected into output schemas |
+| `input_instruction` | `str | None` | — | Instruction injected into input schemas |
+| `output_instruction` | `str | None` | — | Instruction injected into output schemas |
 
 > **Validation:** At least one of `input_instruction` or `output_instruction` must be provided, or a `ValueError` is raised.
 

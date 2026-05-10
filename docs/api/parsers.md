@@ -2,7 +2,7 @@
 
 **Module:** `promptframe.parsers`
 
-JSON parsing utilities for LLM responses. Standalone — no inference library dependency. Adapted from LangChain (MIT License).
+JSON parsing utilities for LLM responses. Standalone — no inference library dependency. Adapted from [LangChain](https://github.com/langchain-ai/langchain) (MIT License).
 
 ---
 

@@ -27,7 +27,7 @@ PromptFrame solves all of this by giving prompts a **home** (YAML files), a **ty
 
     Store prompts in structured, versionable YAML files. Use environments (`dev`/`prod`) for overrides.
 
-- :material-type-variant: **Typed loading**
+- :material-code-json: **Typed loading**
 
     Every prompt file loads as a Pydantic model. Access prompts as attributes: `p.system_prompt`.
 
@@ -43,10 +43,6 @@ PromptFrame solves all of this by giving prompts a **home** (YAML files), a **ty
 
     Store reusable markdown instruction documents (`SKILL.md`) and inject them into prompts by section.
 
-- :material-monitor: **Streamlit UI**
-
-    Browse, playground, builder, and skill editor — all in a local web UI.
-
 </div>
 
 ---
@@ -55,12 +51,6 @@ PromptFrame solves all of this by giving prompts a **home** (YAML files), a **ty
 
 ```bash
 pip install promptframe
-```
-
-With Streamlit UI:
-
-```bash
-pip install "promptframe[ui]"
 ```
 
 ---

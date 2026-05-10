@@ -2,23 +2,28 @@ version: 1.0
 metadata:
   type: prompt
   name: summarise
-  description: Text summarisation prompts
+  description: Production summarisation prompts
   tags: [nlp, summarise]
   project: demo
-
 prompts:
-- pid: short_summary
-  description: Summarise text in one sentence.
-  input_variables: [text]
-  prompt: |
-    Summarise the following text in a single sentence:
+  - pid: system_role
+    description: Stricter system role for production.
+    prompt: |
+      You are a senior professional editor.
+      Respond ONLY with the requested summary. No preamble, no commentary.
 
-    {text}
+  - pid: short_summary
+    description: Summarise text in one sentence - PROD.
+    input_variables: [text]
+    prompt: |
+      You are a professional editor. Summarise in one sentence, no jargon:
 
-- pid: bullet_summary
-  description: Summarise as bullet points.
-  input_variables: [text, n]
-  prompt: |
-    Summarise the following text as exactly {n} bullet points:
+      {text}
 
-    {text}
+  - pid: bullet_summary
+    description: Summarise as N bullet points - PROD.
+    input_variables: [text, n]
+    prompt: |
+      You are a professional editor. Produce exactly {n} concise bullet points:
+
+      {text}

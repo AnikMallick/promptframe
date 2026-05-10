@@ -201,8 +201,11 @@ SkillComponent(
 ## CLI scaffold
 
 ```bash
-promptframe init regular  # not for skills — create the .md file manually
-                          # or use the Streamlit UI → Skills → New skill
+promptframe skill init code-review
+# Creates: skills/code-review/SKILL.md
+
+promptframe skill init data-analysis --path my_skills/
+# Creates: my_skills/data-analysis/SKILL.md
 ```
 
 ---

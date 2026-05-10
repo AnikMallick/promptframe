@@ -30,7 +30,7 @@ class OutputParsingError(Exception):
 
 
 class MissingContextKeyError(ValueError):
-    """Raised when a required template key is absent from the render context."""
+    """Deprecated. Raised when a required template key is absent from the render context."""
 
     def __init__(self, key: str) -> None:
         self.key = key

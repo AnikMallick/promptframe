@@ -2,23 +2,28 @@ version: 1.0
 metadata:
   type: prompt
   name: summarise
-  description: Text summarisation prompts
+  description: Text summarisation prompts (common baseline)
   tags: [nlp, summarise]
   project: demo
-
 prompts:
-- pid: short_summary
-  description: Summarise text in one sentence.
-  input_variables: [text]
-  prompt: |
-    Summarise the following text in a single sentence:
+  - pid: system_role
+    description: System role for the summarisation assistant.
+    prompt: |
+      You are a professional summarisation assistant.
+      Be concise, factual, and avoid unnecessary jargon.
 
-    {text}
+  - pid: short_summary
+    description: Summarise text in one sentence.
+    input_variables: [text]
+    prompt: |
+      Summarise the following text in a single sentence:
 
-- pid: bullet_summary
-  description: Summarise as bullet points.
-  input_variables: [text, n]
-  prompt: |
-    Summarise the following text as exactly {n} bullet points:
+      {text}
 
-    {text}
+  - pid: bullet_summary
+    description: Summarise as N bullet points.
+    input_variables: [text, n]
+    prompt: |
+      Summarise the following text as exactly {n} bullet points:
+
+      {text}

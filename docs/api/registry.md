@@ -17,8 +17,8 @@ class PromptRegistry(base, environment=None, common=None)
 | Argument | Type | Required | Description |
 |---|---|---|---|
 | `base` | `str` | ✅ | Root path containing prompt YAML files |
-| `environment` | `str \| None` | — | Sub-folder for environment-specific overrides (e.g. `"prod"`). Files here take priority over `common` and `base`. |
-| `common` | `str \| None` | — | Sub-folder for shared prompts used across environments |
+| `environment` | `str | None` | — | Sub-folder for environment-specific overrides (e.g. `"prod"`). Files here take priority over `common` and `base`. |
+| `common` | `str | None` | — | Sub-folder for shared prompts used across environments |
 
 ### File resolution order
 

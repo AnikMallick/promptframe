@@ -2,7 +2,7 @@
 
 **Module:** `promptframe.builder`
 
-Fluent builder for assembling multi-part prompts from [`BasePromptComponent`](./components.md) instances. Components are joined with blank lines (`\n\n`) — the standard LLM prompt separator.
+Fluent builder for assembling multi-part prompts from [`BasePromptComponent`](./components.md) instances. Components are joined with blank lines (`\n\n` by default) — the standard LLM prompt separator.
 
 ---
 
@@ -17,7 +17,7 @@ class StructuredPromptBuilder()
 | Operator | Description |
 |---|---|
 | `builder >> component` | Append a component (right-shift) |
-| `builder \| component` | Append a component (pipe) |
+| `builder | component` | Append a component (pipe) |
 
 Both operators return `self`, enabling fluent chaining.
 
@@ -47,7 +47,7 @@ Render all components and join them with `\n\n`. Empty component outputs are aut
 
 | Argument | Type | Default | Description |
 |---|---|---|---|
-| `context` | `Dict \| None` | `None` | Variables for `{placeholder}` interpolation passed to every component |
+| `context` | `Dict | None` | `None` | Variables for `{placeholder}` interpolation passed to every component |
 
 **Returns:** Complete prompt as a single string.
 
@@ -65,7 +65,7 @@ Print a labelled preview of each component to stdout. Useful during development 
 
 | Argument | Type | Default | Description |
 |---|---|---|---|
-| `context` | `Dict \| None` | `None` | Render variables |
+| `context` | `Dict | None` | `None` | Render variables |
 | `show_index` | `bool` | `True` | Prefix each component with its position index |
 
 ```python

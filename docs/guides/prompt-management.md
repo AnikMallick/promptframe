@@ -2,7 +2,7 @@
 
 ## YAML file types
 
-promptframe supports two types of prompt YAML files, set via `metadata.type`:
+PromptFrame supports two types of prompt YAML files, set via `metadata.type`:
 
 | Type | Use for |
 |---|---|
@@ -71,6 +71,9 @@ version: 1.0
 metadata:
   type: model_prompt
   name: invoice_prompts
+  description: Demo model prompt.
+  tags: [invoice_instructions]
+  project: my_project
 
 prompts:
   - pid: total_field
@@ -137,7 +140,7 @@ See [Structured Output](structured-output.md) for how to use `prompt_model_dict`
     | `pid` | ✅ | Unique ID |
     | `model_attribute_id` | ✅ | Links to a Python `LLMField` |
     | `input_instruction` | ⚠️ | How the LLM should interpret input (at least one of these required) |
-    | `output_instruction` | ⚠️ | What the LLM should output for this field |
+    | `output_instruction` | ⚠️ | What the LLM should output for this field (at least one of these required) |
     | `description` | | Human-readable description |
     | `input_variables` | | List of placeholder names |
 

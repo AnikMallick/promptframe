@@ -3,8 +3,8 @@ from .basic import (
     ConditionalPromptComponent,
     InputComponent,
     PromptSectionComponent,
-    SequentialPromptComponent,
     SimplePromptComponent,
     SkillComponent,
     TemplatePromptComponent,
 )
+from .base import SequentialPromptComponent

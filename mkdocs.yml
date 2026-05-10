@@ -67,6 +67,9 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - md_in_html
   - tables
@@ -82,6 +85,7 @@ nav:
       - Skills: guides/skills.md
       - Prompt Builder: guides/builder.md
       - Environments: guides/environments.md
+      - CLI: guides/cli.md
   - API Reference:
       - Intro: api/index.md
       - PromptRegistry: api/registry.md

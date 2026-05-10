@@ -263,14 +263,3 @@ prompt = (
 # With XML wrapper
 SkillComponent(skill, wrapper="<skill>\n{skill}\n</skill>")
 ```
-
----
-
-## Error Handling
-
-All `render()` methods decorated with `@catch_keyerror` will raise `ValueError` (with a helpful message) if a required placeholder key is missing from the context, instead of the raw `KeyError`.
-
-```python
-c = SimplePromptComponent("Hello, {name}!")
-c.render({})  # ValueError: Missing key in context for template: 'name'
-```

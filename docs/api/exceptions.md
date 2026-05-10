@@ -78,7 +78,7 @@ except OutputParsingError as e:
 
 ---
 
-## `MissingContextKeyError`
+## `MissingContextKeyError` (Deprecated)
 
 ```python
 class MissingContextKeyError(ValueError)

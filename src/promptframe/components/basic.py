@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from ..skill import Skill
 
 from ..models import Prompt
-from .base import BasePromptComponent, catch_keyerror
+from .base import BasePromptComponent, safe_format
 
 
 class SimplePromptComponent(BasePromptComponent):
@@ -35,12 +35,11 @@ class SimplePromptComponent(BasePromptComponent):
             )
         self.prompt = prompt
 
-    @catch_keyerror
     def render(self, context: Optional[Dict[str, object]] = None) -> str:
         ctx = context or {}
         if isinstance(self.prompt, Prompt):
-            return self.prompt.prompt.format(**ctx) if ctx else self.prompt.prompt
-        return self.prompt.format(**ctx) if ctx else self.prompt
+            return safe_format(self.prompt.prompt, **ctx) if ctx else self.prompt.prompt
+        return safe_format(self.prompt, **ctx) if ctx else self.prompt
 
     def __repr__(self) -> str:
         text = self.prompt.prompt if isinstance(self.prompt, Prompt) else self.prompt
@@ -82,22 +81,21 @@ class PromptSectionComponent(BasePromptComponent):
     def _bullet_join(items: List[str]) -> str:
         return "\n".join(f"- {item}" for item in items)
 
-    @catch_keyerror
     def render(self, context: Optional[Dict[str, object]] = None) -> str:
         ctx = context or {}
         req = self.requirement
 
         if isinstance(req, Prompt):
-            body = req.prompt.format(**ctx) if ctx else req.prompt
+            body = safe_format(req.prompt, **ctx) if ctx else req.prompt
         elif isinstance(req, str):
-            body = req.format(**ctx) if ctx else req
+            body = safe_format(req, **ctx) if ctx else req
         elif isinstance(req, list):
             if all(isinstance(i, str) for i in req):
                 raw = self._bullet_join(req)  # type: ignore[arg-type]
-                body = raw.format(**ctx) if ctx else raw
+                body = safe_format(raw, **ctx) if ctx else raw
             elif all(isinstance(i, Prompt) for i in req):
                 raw = self._bullet_join([p.prompt for p in req])  # type: ignore[union-attr]
-                body = raw.format(**ctx) if ctx else raw
+                body = safe_format(raw, **ctx) if ctx else raw
             else:
                 raise TypeError("List must contain either all str or all Prompt objects.")
         else:
@@ -130,10 +128,9 @@ class InputComponent(BasePromptComponent):
         self.header = header
         self.template = template
 
-    @catch_keyerror
     def render(self, context: Optional[Dict[str, object]] = None) -> str:
         ctx = context or {}
-        body = self.template.format(**ctx) if ctx else self.template
+        body = safe_format(self.template, **ctx) if ctx else self.template
         return f"{self.header}\n{body}" if self.header else body
 
     def __repr__(self) -> str:
@@ -169,40 +166,14 @@ class TemplatePromptComponent(BasePromptComponent):
         self.template = template
         self.components = components
 
-    @catch_keyerror
     def render(self, context: Optional[Dict[str, object]] = None) -> str:
         ctx = context or {}
         filled = {key: comp.render(ctx) for key, comp in self.components.items()}
-        return self.template.format(**filled)
+        return safe_format(self.template, **filled)
 
     def __repr__(self) -> str:
         keys = list(self.components)
         return f"TemplatePromptComponent(slots={keys})"
-
-
-class SequentialPromptComponent(BasePromptComponent):
-    """Render a list of components in order, joined by blank lines.
-
-    You normally create these implicitly via the ``|`` operator::
-
-        result = SimplePromptComponent("Part A") | SimplePromptComponent("Part B")
-    """
-
-    def __init__(self, components: List[BasePromptComponent]) -> None:
-        self.components = list(components)
-
-    @catch_keyerror
-    def render(self, context: Optional[Dict[str, object]] = None) -> str:
-        ctx = context or {}
-        return "\n\n".join(c.render(ctx) for c in self.components)
-
-    def __or__(self, other: BasePromptComponent) -> "SequentialPromptComponent":  # type: ignore[override]
-        if isinstance(other, BasePromptComponent):
-            return SequentialPromptComponent([*self.components, other])
-        return NotImplemented
-
-    def __repr__(self) -> str:
-        return f"SequentialPromptComponent(n={len(self.components)})"
 
 
 class ConditionalPromptComponent(BasePromptComponent):

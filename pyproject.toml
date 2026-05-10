@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "promptframe"
-version = "0.1.0"
+version = "0.2.0"
 
 authors = [
     {name = "Anik Mallick", email = "anik.mallick.code@gmail.com"}
@@ -27,13 +27,11 @@ classifiers = [
 dependencies = [
     "pydantic>=2.0",
     "pyyaml>=6.0",
-    # "pyyaml>=5.1",
     "rich>=13.0.0",
     "python-frontmatter>=1.1.0",
 ]
 
 [project.optional-dependencies]
-ui = ["streamlit>=1.30"]
 dev = ["pytest>=7", "ruff", "mypy", "build", "twine"]
 
 [project.scripts]
@@ -42,9 +40,6 @@ promptframe = "promptframe.cli:main"
 [project.urls]
 Repository = "https://github.com/AnikMallick/promptframe"
 
-# [tool.setuptools.packages.find]
-# where = ["."]
-# include = ["promptframe*"]
 [tool.setuptools]
 package-dir = {"" = "src"}
 

@@ -23,7 +23,8 @@ class StructuredPromptBuilder:
     """Assemble a list of :class:`BasePromptComponent` instances into a prompt.
 
     Components are joined with blank lines (``\\n\\n``) when :meth:`build` is
-    called — the same separator used by most LLM prompt conventions.
+    called — the same separator used by most LLM prompt conventions. Unless some separator
+    is specifically mentioned.
 
     Operators::
 
@@ -32,8 +33,14 @@ class StructuredPromptBuilder:
         component | component  # returns a SequentialPromptComponent
     """
 
-    def __init__(self) -> None:
+    def __init__(self, separator: str = "\n\n") -> None:
+        """Initialize a StructuredPromptBuilder
+
+        Args:
+            separator (str, optional): Components are joined with with string. Defaults to ``\\n\\n``.
+        """
         self.components: List[BasePromptComponent] = []
+        self.separator = separator
 
     def add(self, component: BasePromptComponent) -> "StructuredPromptBuilder":
         """Append a component and return *self* for chaining."""
@@ -70,7 +77,7 @@ class StructuredPromptBuilder:
         ctx = context or {}
         parts = [c.render(ctx) for c in self.components]
         # Drop empty strings (e.g. ConditionalPromptComponent that didn't fire)
-        return "\n\n".join(p for p in parts if p)
+        return self.separator.join(p for p in parts if p)
 
     def preview(
         self,

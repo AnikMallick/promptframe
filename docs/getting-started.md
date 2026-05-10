@@ -74,7 +74,7 @@ rendered = p.prompt_dict["answer_question"].format(question="What is 2+2?")
 
 ## Using with an LLM
 
-promptframe is LLM-agnostic — it builds strings, nothing more. Here's the pattern with any client:
+PromptFrame is LLM-agnostic — it builds strings, nothing more. Here's the pattern with any client:
 
 === "OpenAI"
 

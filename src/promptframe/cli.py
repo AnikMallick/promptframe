@@ -50,7 +50,7 @@ prompts:
     description: Summarize a block of text.
 
     input_variables:
-      - text
+      - [text]
 
     prompt: |
       Summarize the following text:
@@ -61,12 +61,16 @@ prompts:
     description: Classify content into a topic.
 
     input_variables:
-      - content
+      - [content, val]
 
     prompt: |
       Classify the following content into a topic category:
 
       {{content}}
+      
+      Just few extra content
+      
+      {{val}}
 """
 
 _MODEL_PROMPT_TEMPLATE = """\
@@ -86,7 +90,7 @@ prompts:
     model_attribute_id: customer_name
 
     input_variables:
-      - raw_name
+      - [raw_name]
 
     input_instruction: |
       The input contains {{raw_name}}.

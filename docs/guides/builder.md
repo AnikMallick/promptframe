@@ -1,6 +1,6 @@
 # Prompt Builder
 
-`StructuredPromptBuilder` composes multiple prompt components into a single string, joining them with blank lines (`\n\n`).
+`StructuredPromptBuilder` composes multiple prompt components into a single string, joining them with blank lines (`\n\n`) by default.
 
 ---
 
@@ -21,7 +21,7 @@ prompt = (
 
 ### Operators
 
-Both `>>` and `|` append a component. Use whichever feels right for your style:
+Both >> and | append a component. Use whichever feels right for your style:
 
 ```python
 # >> style
@@ -40,6 +40,13 @@ prompt = (
     >> comp_a
     >> comp_b
     >> comp_c
+).build()
+# same as
+prompt = (
+    StructuredPromptBuilder()
+    | comp_a
+    | comp_b
+    | comp_c
 ).build()
 ```
 
