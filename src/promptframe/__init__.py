@@ -1,11 +1,11 @@
 """
-promptkit — LLM-agnostic prompt management with structured output support.
+PromptFrame — LLM-agnostic prompt management with structured output support.
 
 Two usage paths:
 
 **Plain prompt management** (no structured output)::
 
-    from promptkit import PromptRegistry, StructuredPromptBuilder, SimplePromptComponent
+    from promptframe import PromptRegistry, StructuredPromptBuilder, SimplePromptComponent
 
     reg = PromptRegistry("prompts/")
     p   = reg.load_prompt("my_prompts")
@@ -18,7 +18,7 @@ Two usage paths:
 
 **Structured output** (LLM-agnostic, decoupled prompts)::
 
-    from promptkit import PromptRegistry, LLMBaseModel, LLMField
+    from promptframe import PromptRegistry, LLMBaseModel, LLMField
 
     class Invoice(LLMBaseModel):
         total:      float      = LLMField(..., model_attribute_id="invoice_total")

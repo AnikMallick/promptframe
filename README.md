@@ -268,4 +268,4 @@ Full API reference is available in the [`docs/`](./docs/) folder:
 
 ## Status
 
-`0.1.0` — active development. API is stabilising. Watch this repo for the first stable release.
+`0.2.2` — active development. API is stabilising. Watch this repo for the first stable release.

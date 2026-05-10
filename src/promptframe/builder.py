@@ -3,7 +3,7 @@ StructuredPromptBuilder — fluent, operator-friendly prompt assembly.
 
 Usage::
 
-    from promptkit import StructuredPromptBuilder, SimplePromptComponent
+    from promptframe import StructuredPromptBuilder, SimplePromptComponent
 
     prompt = (
         StructuredPromptBuilder()
