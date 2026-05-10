@@ -272,8 +272,3 @@ Full API reference is available in the [`docs/`](./docs/) folder:
 - [Exceptions](./docs/exceptions.md)
 - [CLI](./docs/cli.md)
 
----
-
-## Status
-
-`0.2.2` — active development. API is stabilising. Watch this repo for the first stable release.
