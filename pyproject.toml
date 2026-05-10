@@ -38,7 +38,10 @@ dev = ["pytest>=7", "ruff", "mypy", "build", "twine"]
 promptframe = "promptframe.cli:main"
 
 [project.urls]
+Homepage = "https://github.com/AnikMallick/promptframe"
+Documentation = "https://anikmallick.github.io/promptframe/"
 Repository = "https://github.com/AnikMallick/promptframe"
+Issues = "https://github.com/AnikMallick/promptframe/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
